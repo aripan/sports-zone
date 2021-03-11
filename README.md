@@ -9,7 +9,7 @@ A single page application is built using HTML5, CSS3, Bootstrap(React Bootstrap)
 
 ## Hosted Version
 
-The latest version is deployed and hosted on Netlify. Check it out by clicking on
+The latest version is deployed and hosted on Netlify. Check it out by clicking on https://sports-zone-super.netlify.app/
 
 ## Notes
 
