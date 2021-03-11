@@ -15,15 +15,15 @@ const Home = (props) => {
       .then((data) => setTeams(data.teams));
   }, []);
   return (
-    <div>
-      <Container>
+    <div style={{ backgroundColor: "#000C40" }}>
+      <Container className="pt-4">
         <Row>
           {teams.map((team) => (
             <Col
               sm={12}
               md={6}
               lg={4}
-              style={{ padding: "10px" }}
+              style={{ padding: "5px" }}
               key={team.idTeam}
             >
               <Team team={team} changeHeaderImg={changeHeaderImg}></Team>

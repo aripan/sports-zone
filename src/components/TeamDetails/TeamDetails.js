@@ -14,7 +14,7 @@ const TeamDetails = (props) => {
 
   // console.log(team);
   return (
-    <div>
+    <div style={{ backgroundColor: "#000C40" }}>
       <TeamIntroduction team={team}></TeamIntroduction>
     </div>
   );
