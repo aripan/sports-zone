@@ -1,27 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
-import AllLeagues from "./components/AllLeagues/AllLeagues";
-import LeagueDetails from "./components/LeagueDetails/LeagueDetails";
+import TeamDetails from "./components/TeamDetails/TeamDetails";
 import NoMatch from "./components/NoMatch/NoMatch";
 
 function App() {
+  const [headerValues, setHeaderValues] = useState([]);
+  const changeHeaderImg = (...arg) => {
+    setHeaderValues(arg);
+  };
+
   return (
     <Router>
-      <Header></Header>
+      <Header headerValues={headerValues}></Header>
       <Switch>
         <Route path="/home">
-          <Home></Home>
+          <Home changeHeaderImg={changeHeaderImg}></Home>
         </Route>
         {/* <Route path="/allLeagues">
           <AllLeagues></AllLeagues>
         </Route> */}
-        <Route path="/allLeagues/:leagueId">
-          <LeagueDetails></LeagueDetails>
+        <Route path="/allTeams/:idTeam">
+          <TeamDetails></TeamDetails>
         </Route>
         <Route exact path="/">
-          <Home></Home>
+          <Home changeHeaderImg={changeHeaderImg}></Home>
         </Route>
         <Route path="*">
           <NoMatch></NoMatch>
